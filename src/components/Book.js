@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
+import { FaTrash } from 'react-icons/fa';
 
-const Book = ({ title, author }) => (
+const Book = ({
+  title, author, id, deleteBook,
+}) => (
   <li>
     <div>
       <span>
@@ -9,6 +12,9 @@ const Book = ({ title, author }) => (
       <span>
         {author}
       </span>
+      <button type="button" onClick={() => deleteBook(id)}>
+        <FaTrash />
+      </button>
     </div>
   </li>
 );
@@ -16,6 +22,8 @@ const Book = ({ title, author }) => (
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  deleteBook: PropTypes.func.isRequired,
 };
 
 export default Book;

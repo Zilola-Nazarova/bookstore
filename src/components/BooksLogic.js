@@ -5,7 +5,7 @@ import BooksList from './BooksList';
 
 const BooksLogic = () => {
   function getInitialBooks() {
-    // getting stored books
+    // getting stored books from local storage
     const temp = localStorage.getItem('books');
     const savedBooks = JSON.parse(temp);
     return savedBooks || [];
@@ -14,7 +14,7 @@ const BooksLogic = () => {
   const [booksState, setBooksState] = useState(getInitialBooks());
 
   useEffect(() => {
-    // storing todos items
+    // storing books in local storage
     const temp = JSON.stringify(booksState);
     localStorage.setItem('books', temp);
   }, [booksState]);
@@ -28,11 +28,18 @@ const BooksLogic = () => {
     setBooksState([...booksState, newBook]);
   };
 
+  const deleteBook = (id) => {
+    setBooksState([
+      ...booksState.filter((book) => book.id !== id),
+    ]);
+  };
+
   return (
     <div>
       <AddBook addBook={addBook} />
       <BooksList
         bookProps={booksState}
+        deleteBook={deleteBook}
       />
     </div>
   );
