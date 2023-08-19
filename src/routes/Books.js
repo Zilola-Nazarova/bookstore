@@ -1,7 +1,7 @@
+import BooksList from '../components/BooksList';
+
 const Books = () => (
-  <div>
-    <h2>Welcome to our Books page!</h2>
-  </div>
+  <BooksList />
 );
 
 export default Books;
