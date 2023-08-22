@@ -47,6 +47,7 @@ The list is saved in local storage so that a user can refer to this list later.
     <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS">CSS</a></li>
     <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript">JavaScript</a></li>
     <li><a href="https://react.dev/">React</a></li>
+    <li><a href="https://redux-toolkit.js.org/">Redux</a></li>
   </ul>
   <summary>Server</summary>
   <ul>
@@ -102,8 +103,7 @@ To install all dependencies run the following command:
 
 You can use this project to:
 
-- Make simple calculations.
-- Read a random math-related quote.
+- Create your list of Books by adding and deleting books.
 
 To run the app in the development mode:
 > npm start
