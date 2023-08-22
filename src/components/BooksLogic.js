@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import AddBook from './AddBook';
 import BooksList from './BooksList';
 
@@ -19,15 +18,6 @@ const BooksLogic = () => {
     localStorage.setItem('books', temp);
   }, [booksState]);
 
-  const addBook = (title, author) => {
-    const newBook = {
-      id: uuidv4(),
-      title,
-      author,
-    };
-    setBooksState([...booksState, newBook]);
-  };
-
   const deleteBook = (id) => {
     setBooksState([
       ...booksState.filter((book) => book.id !== id),
@@ -36,7 +26,7 @@ const BooksLogic = () => {
 
   return (
     <div>
-      <AddBook addBook={addBook} />
+      <AddBook />
       <BooksList
         bookProps={booksState}
         deleteBook={deleteBook}
