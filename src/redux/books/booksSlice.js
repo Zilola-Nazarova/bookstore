@@ -21,8 +21,15 @@ const booksData = [
   },
 ];
 
+function getInitialBooks() {
+  // getting stored books from local storage
+  const temp = localStorage.getItem('books');
+  const savedBooks = JSON.parse(temp);
+  return savedBooks || booksData;
+}
+
 const initialState = {
-  books: booksData,
+  books: getInitialBooks(),
 };
 
 export const booksSlice = createSlice({
@@ -31,9 +38,13 @@ export const booksSlice = createSlice({
   reducers: {
     addBook: (state, action) => {
       state.books.push(action.payload);
+      const temp = JSON.stringify(state.books);
+      localStorage.setItem('books', temp);
     },
     deleteBook: (state, action) => {
       state.books = state.books.filter((book) => book.item_id !== action.payload);
+      const temp = JSON.stringify(state.books);
+      localStorage.setItem('books', temp);
     },
   },
 });
