@@ -1,29 +1,29 @@
 import PropTypes from 'prop-types';
 import { FaTrash } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { deleteBook } from '../redux/books/booksSlice';
 
-const Book = ({
-  title, author, id, deleteBook,
-}) => (
-  <li>
-    <div>
-      <span>
-        {title}
-      </span>
-      <span>
-        {author}
-      </span>
-      <button type="button" onClick={() => deleteBook(id)}>
+const Book = ({ book }) => {
+  const { title, author, category } = book;
+  const dispatch = useDispatch();
+
+  return (
+    <li>
+      <h2>{title}</h2>
+      <h3>{author}</h3>
+      <h4>{category}</h4>
+      <button
+        type="button"
+        onClick={() => dispatch(deleteBook(book.item_id))}
+      >
         <FaTrash />
       </button>
-    </div>
-  </li>
-);
+    </li>
+  );
+};
 
 Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  deleteBook: PropTypes.func.isRequired,
+  book: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default Book;
