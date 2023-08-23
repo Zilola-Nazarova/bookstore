@@ -43,6 +43,20 @@ export const booksSlice = createSlice({
       localStorage.setItem('books', temp);
     },
   },
+  extraReducers(builder) {
+    builder
+      .addCase(getBooks.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getBooks.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.books = action.payload.results;
+      })
+      .addCase(getBooks.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload.message
+      })
+  },
 });
 
 export const { addBook, deleteBook } = booksSlice.actions;
