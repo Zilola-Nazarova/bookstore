@@ -1,35 +1,31 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const booksData = [
-  {
-    item_id: 'item1',
-    title: 'The Great Gatsby',
-    author: 'John Smith',
-    category: 'Fiction',
-  },
-  {
-    item_id: 'item2',
-    title: 'Anna Karenina',
-    author: 'Leo Tolstoy',
-    category: 'Fiction',
-  },
-  {
-    item_id: 'item3',
-    title: 'The Selfish Gene',
-    author: 'Richard Dawkins',
-    category: 'Nonfiction',
-  },
-];
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/101/books';
 
-function getInitialBooks() {
-  // getting stored books from local storage
-  const temp = localStorage.getItem('books');
-  const savedBooks = JSON.parse(temp);
-  return savedBooks || booksData;
-}
+export const getBooks = createAsyncThunk(
+  'books/getBooks',
+  async(_, thunkAPI) => {
+    try {
+      const resp = await axios(url);
+      return resp.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+)
+
+// function getInitialBooks() {
+//   // getting stored books from local storage
+//   const temp = localStorage.getItem('books');
+//   const savedBooks = JSON.parse(temp);
+//   return savedBooks || booksData;
+// }
 
 const initialState = {
-  books: getInitialBooks(),
+  books: [],
+  isLoading: false,
+  error: undefined,
 };
 
 export const booksSlice = createSlice({
