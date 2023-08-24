@@ -2,9 +2,9 @@ import AddBook from './AddBook';
 import BooksList from './BooksList';
 
 const BooksLogic = () => (
-  <div>
-    <AddBook />
+  <div className="bools-logic">
     <BooksList />
+    <AddBook />
   </div>
 );
 
