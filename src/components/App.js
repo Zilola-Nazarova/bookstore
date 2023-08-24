@@ -6,6 +6,7 @@ import {
 import Books from '../routes/Books';
 import Categories from '../routes/Categories';
 import Layout from './Layout';
+import '../styles/App.css';
 
 const App = () => (
   <Routes>
