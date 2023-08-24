@@ -16,8 +16,8 @@ const Book = ({ book }) => {
     <li className={styles.book}>
       <div className={styles.data}>
         <h2>{title}</h2>
-        <span>{author}</span>
-        <span>{category}</span>
+        <h3>{author}</h3>
+        <h4>{category}</h4>
       </div>
       <div className={styles.actions}>
         <button
