@@ -1,8 +1,7 @@
-// import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { createBook } from '../redux/books/booksSlice';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
@@ -24,10 +23,11 @@ const AddBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim() && author.trim()) {
-      dispatch(addBook({
+      dispatch(createBook({
         title,
         author,
         item_id: uuidv4(),
+        category: 'category',
       }));
       setTitle('');
       setAuthor('');

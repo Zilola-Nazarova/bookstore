@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types';
 import { FaTrash } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
-import { deleteBook } from '../redux/books/booksSlice';
+import { removeBook } from '../redux/books/booksSlice';
 
 const Book = ({ book }) => {
-  const { title, author, category } = book;
+  const {
+    title,
+    author,
+    category,
+    id,
+  } = book;
   const dispatch = useDispatch();
 
   return (
@@ -14,7 +19,7 @@ const Book = ({ book }) => {
       <h4>{category}</h4>
       <button
         type="button"
-        onClick={() => dispatch(deleteBook(book.item_id))}
+        onClick={() => dispatch(removeBook(id))}
       >
         <FaTrash />
       </button>
