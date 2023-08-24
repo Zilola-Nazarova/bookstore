@@ -1,13 +1,15 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/101/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/eWTLKRwVwuyoVtssRIYT/books';
 
 export const getBooks = createAsyncThunk(
   'books/getBooks',
   async(_, thunkAPI) => {
     try {
-      const resp = await axios(url);
+      const resp = await axios.get(url, {
+        method: 'POST',
+      });
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -34,13 +36,13 @@ export const booksSlice = createSlice({
   reducers: {
     addBook: (state, action) => {
       state.books.push(action.payload);
-      const temp = JSON.stringify(state.books);
-      localStorage.setItem('books', temp);
+      // const temp = JSON.stringify(state.books);
+      // localStorage.setItem('books', temp);
     },
     deleteBook: (state, action) => {
       state.books = state.books.filter((book) => book.item_id !== action.payload);
-      const temp = JSON.stringify(state.books);
-      localStorage.setItem('books', temp);
+      // const temp = JSON.stringify(state.books);
+      // localStorage.setItem('books', temp);
     },
   },
   extraReducers(builder) {
@@ -50,7 +52,7 @@ export const booksSlice = createSlice({
       })
       .addCase(getBooks.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.books = action.payload.results;
+        state.books = action.payload || [];
       })
       .addCase(getBooks.rejected, (state, action) => {
         state.isLoading = false;
