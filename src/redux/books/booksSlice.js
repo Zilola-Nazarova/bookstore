@@ -50,14 +50,7 @@ const initialState = {
 export const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    addBook: (state, action) => {
-      state.books.push(action.payload);
-    },
-    deleteBook: (state, action) => {
-      state.books = state.books.filter((book) => book.item_id !== action.payload);
-    },
-  },
+  reducers: { },
   extraReducers(builder) {
     builder
       .addCase(getBooks.pending, (state) => {
@@ -78,7 +71,5 @@ export const booksSlice = createSlice({
       });
   },
 });
-
-export const { addBook, deleteBook } = booksSlice.actions;
 
 export default booksSlice.reducer;
