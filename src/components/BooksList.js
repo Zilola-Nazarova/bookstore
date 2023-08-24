@@ -6,32 +6,36 @@ import Book from './Book';
 const BooksList = () => {
   const dispatch = useDispatch();
   const { books, isLoading, error } = useSelector((store) => store.books);
-  
+
   useEffect(() => {
     dispatch(getBooks());
-  }, []);
+  }, [dispatch]);
 
-  return (
-    <>
-      { isLoading === true ? (
-        <p>The books list is loading!</p>
-      ) : error ? (
-        <p>Something went wrong!
-          <br />
-          { error }
-        </p>
-      ) : (
-        <ul>
-          {books.map((book) => (
-            <Book
-              key={book.item_id}
-              book={book}
-            />
-          ))}
-        </ul>
-      )}
-    </>
-  );
+  if (isLoading) {
+    return <p>The books list is loading!</p>;
+  }
+  if (error) {
+    return (
+      <p>
+        Something went wrong!
+        <br />
+        { error }
+      </p>
+    );
+  }
+  if (books.length !== 0) {
+    return (
+      <ul>
+        {books.map((book) => (
+          <Book
+            key={book.id}
+            book={book}
+          />
+        ))}
+      </ul>
+    );
+  }
+  return <p>No books found!</p>;
 };
 
 export default BooksList;
