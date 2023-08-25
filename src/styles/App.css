@@ -46,6 +46,7 @@
   list-style: none;
   display: flex;
   gap: 2rem;
+  flex: 2;
 }
 
 .navbar li {
@@ -66,12 +67,12 @@
 
 .navbar > a {
   align-self: center;
-  flex: 2;
   display: flex;
   justify-content: flex-end;
 }
 
 .navbar .profile {
+  background-color: transparent;
   width: 2.813rem;
   height: 2.813rem;
   border: solid 1px #e8e8e8;
@@ -91,4 +92,19 @@
 hr {
   margin: 0 6.25rem;
   border: solid 1px #e8e8e8;
+}
+
+.not-found {
+  flex: 2;
+  background-color: #f5f6fa;
+  display: flex;
+
+}
+
+.not-found p {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  color: #121212;
+  opacity: 0.5;
+  margin: auto;
 }

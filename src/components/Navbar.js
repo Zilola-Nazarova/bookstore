@@ -18,13 +18,11 @@ const Navbar = () => (
         </li>
       ))}
     </ul>
-    <NavLink to="#">
-      <div className="profile">
-        <BsFillPersonFill
-          color="#0290ff"
-          size="22px"
-        />
-      </div>
+    <NavLink to="#" className="profile">
+      <BsFillPersonFill
+        color="#0290ff"
+        size="22px"
+      />
     </NavLink>
   </nav>
 );

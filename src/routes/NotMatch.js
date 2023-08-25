@@ -1,5 +1,5 @@
 const NotMatch = () => (
-  <div>
+  <div className="not-found">
     <p>Not found!</p>
   </div>
 );
