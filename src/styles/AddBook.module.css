@@ -9,12 +9,12 @@ fieldset {
   padding: 0;
   box-sizing: border-box;
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
 legend {
   text-transform: uppercase;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: -0.18px;
@@ -27,7 +27,7 @@ input {
   padding: 0.813rem 1.063rem;
   border: solid 1px #e8e8e8;
   background-color: #fff;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   letter-spacing: -0.15px;
   margin-right: 2.125rem;
@@ -38,7 +38,7 @@ select {
   margin-right: 2.125rem;
   border: solid 1px #e8e8e8;
   color: #c4c4c4;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1em;
   letter-spacing: -0.15px;
@@ -46,7 +46,7 @@ select {
 }
 
 input::placeholder {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1em;
   letter-spacing: -0.15px;
@@ -60,10 +60,10 @@ input::placeholder {
   border: none;
   background-color: #0290ff;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
   font-weight: bold;
   letter-spacing: 0.5px;
   color: #fff;
-  flex:1;
+  flex: 1;
 }

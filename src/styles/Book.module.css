@@ -56,14 +56,6 @@
   border-right: #e8e8e8 solid 2px;
 }
 
-.actions .btn:first-child {
-  padding-left: 0;
-}
-
-.actions .btn:last-child {
-  border-right: none;
-}
-
 .progress {
   grid-area: 1 / 2 / 3 / 3;
   display: flex;
@@ -138,4 +130,12 @@
   font-size: 0.8rem;
   font-weight: 300;
   color: #121212;
+}
+
+.actions .btn:first-child {
+  padding-left: 0;
+}
+
+.actions .btn:last-child {
+  border-right: none;
 }
