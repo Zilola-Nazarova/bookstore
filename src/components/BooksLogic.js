@@ -1,11 +1,12 @@
 import AddBook from './AddBook';
 import BooksList from './BooksList';
 
-const BooksLogic = () => (
-  <div>
-    <AddBook />
+const BooksPage = () => (
+  <div className="books-page">
     <BooksList />
+    <hr />
+    <AddBook />
   </div>
 );
 
-export default BooksLogic;
+export default BooksPage;

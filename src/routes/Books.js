@@ -1,7 +1,7 @@
-import BooksLogic from '../components/BooksLogic';
+import BooksPage from '../components/BooksLogic';
 
 const Books = () => (
-  <BooksLogic />
+  <BooksPage />
 );
 
 export default Books;

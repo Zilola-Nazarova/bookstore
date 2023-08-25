@@ -1,0 +1,69 @@
+form {
+  padding: 1.8rem 6.25rem 2.5rem 6.25rem;
+  background-color: #f5f6fa;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+}
+
+legend {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+  margin-bottom: 1.2rem;
+}
+
+input {
+  border-radius: 4px;
+  padding: 0.813rem 1.063rem;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  margin-right: 2.125rem;
+  flex: 3;
+}
+
+select {
+  margin-right: 2.125rem;
+  border: solid 1px #e8e8e8;
+  color: #c4c4c4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1em;
+  letter-spacing: -0.15px;
+  flex: 2;
+}
+
+input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1em;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.btn {
+  text-transform: uppercase;
+  height: 2.813rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #fff;
+  flex: 1;
+}
