@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.wrapper {
+  background-color: #f5f6fa;
+}
 
 .wrapper header {
   height: 5.938rem;
@@ -41,8 +44,12 @@
 
 .books-list {
   padding: 2.3rem 6.25rem 2.5rem 6.25rem;
-  background-color: #f5f6fa;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+hr {
+  margin: 0 6.25rem;
+  border: solid 1px #e8e8e8;
 }

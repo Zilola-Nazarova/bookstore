@@ -55,6 +55,12 @@ const AddBook = () => {
             value={author}
             onChange={handleAuthorChange}
           />
+          <select name="categories" id="categories">
+            <option value="" disabled selected>Category</option>
+            <option value="action">Action</option>
+            <option value="economy">Economy</option>
+            <option value="science-fiction">Science Fiction</option>
+          </select>
           <button
             className={styles.btn}
             type="submit"

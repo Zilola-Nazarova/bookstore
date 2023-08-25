@@ -4,6 +4,7 @@ import BooksList from './BooksList';
 const BooksLogic = () => (
   <div className="bools-logic">
     <BooksList />
+    <hr />
     <AddBook />
   </div>
 );
