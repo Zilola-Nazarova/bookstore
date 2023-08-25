@@ -1,12 +1,12 @@
 import AddBook from './AddBook';
 import BooksList from './BooksList';
 
-const BooksLogic = () => (
-  <div className="bools-logic">
+const BooksPage = () => (
+  <div className="books-page">
     <BooksList />
     <hr />
     <AddBook />
   </div>
 );
 
-export default BooksLogic;
+export default BooksPage;
