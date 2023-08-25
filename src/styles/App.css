@@ -10,6 +10,15 @@
   flex: 2;
 }
 
+.books-page > p {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  color: #121212;
+  opacity: 0.5;
+  text-align: center;
+  margin: 2rem;
+}
+
 .wrapper header {
   height: 5.938rem;
   padding: 1.8rem 6.188rem 0 6.25rem;
