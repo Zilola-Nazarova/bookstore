@@ -71,17 +71,36 @@
 }
 
 .pr_chart {
-  background-color: blanchedalmond;
-  padding-right: 3.5rem;
+  padding-right: 15%;
   border-right: solid 2px #e8e8e8;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1.3rem;
 }
 
-.pr_chart p {
-
+.pr_chart .circle {
+  height: 4.25rem;
+  width: 4.25rem;
+  border-radius: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #307bbe;
+  border-top-color: #e8e8e8;
+  transform: rotate(-45deg);
 }
 
 .pr_chart span {
-  
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  color: #121212;
+}
+
+.pr_chart .percentage {
+  opacity: 1;
+  font-family: Montserrat;
+  font-size: 2rem;
+  color: #121212;
 }
 
 .pr_current {

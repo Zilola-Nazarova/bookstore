@@ -42,10 +42,11 @@ const Book = ({ book }) => {
       </div>
       <div className={styles.progress}>
         <div className={styles.pr_chart}>
-          <div>chart</div>
+          <div className={styles.circle}> </div>
           <p>
-            <span>64% </span>
-            Completed
+            <span className={styles.percentage}>64% </span>
+            <br />
+            <span>Completed</span>
           </p>
         </div>
         <div className={styles.pr_current}>
