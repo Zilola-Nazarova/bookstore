@@ -55,8 +55,8 @@ const AddBook = () => {
             value={author}
             onChange={handleAuthorChange}
           />
-          <select name="categories" id="categories">
-            <option value="" disabled selected>Category</option>
+          <select name="categories" id="categories" defaultValue="category">
+            <option value="category" disabled>Category</option>
             <option value="action">Action</option>
             <option value="economy">Economy</option>
             <option value="science-fiction">Science Fiction</option>
