@@ -41,16 +41,16 @@ const Book = ({ book }) => {
         </button>
       </div>
       <div className={styles.progress}>
-        <div className={styles.progress_chart}>
+        <div className={styles.pr_chart}>
           <div>chart</div>
           <p>
             <span>64% </span>
             Completed
           </p>
         </div>
-        <div className={styles.progress_current}>
+        <div className={styles.pr_current}>
           <span>current chapter</span>
-          <span>Chapter 3: &quot;A Lesson Learned&quot;</span>
+          <h3>Chapter 3: &quot;A Lesson Learned&quot;</h3>
           <button
             className={styles.btn}
             type="button"
