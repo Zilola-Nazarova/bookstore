@@ -1,7 +1,19 @@
-const Categories = () => (
-  <div>
-    <h2>Welcome to our Categories page!</h2>
-  </div>
-);
+import { useState } from 'react';
+
+const Categories = () => {
+  const [para, setPara] = useState('');
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setPara('Under construction')}
+      >
+        check status
+      </button>
+      <p>{para}</p>
+    </>
+  );
+};
 
 export default Categories;
