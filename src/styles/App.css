@@ -23,17 +23,23 @@
   height: 5.938rem;
   padding: 1.8rem 6.188rem 0 6.25rem;
   background-color: #fff;
-  display: flex;
-  align-items: baseline;
-  gap: 4rem;
   border-bottom: solid 1px #e8e8e8;
 }
 
-.wrapper h1 {
-  font-family: Montserrat;
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 4rem;
+  width: 100%;
+}
+
+.navbar h1 a {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
   color: #0290ff;
+  text-decoration: none;
 }
 
 .navbar ul {
@@ -54,8 +60,25 @@
   text-decoration: none;
 }
 
-.navbar a.active {
+.navbar ul a.active {
   color: #121212;
+}
+
+.navbar > a {
+  align-self: center;
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar .profile {
+  width: 2.813rem;
+  height: 2.813rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .books-list {
